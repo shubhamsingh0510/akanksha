@@ -75,7 +75,7 @@ left:0;
 display:none;
 }
 
-/* pehli photo turant dikhe */
+/* Pehli photo turant dikhe */
 .slideshow img:first-child{
 display:block;
 }
@@ -152,6 +152,7 @@ For Akanksha ❤️ From Shubham
 
 <script>
 
+// Typewriter message
 let text="Your strength, grace and kindness make the world a beautiful place. And honestly, just having you in my life makes everything brighter. Happy Women's Day Akanksha ❤️";
 let i=0;
 
@@ -163,6 +164,7 @@ setTimeout(type,40);
 }
 }
 
+// Button click
 document.getElementById("startBtn").onclick=function(){
 
 document.getElementById("startScreen").style.display="none";
@@ -171,30 +173,26 @@ document.getElementById("card").style.display="block";
 document.getElementById("music").play();
 
 type();
-
-showSlides();
-
 }
 
+// Slideshow
 let slideIndex=0;
 let slides=document.querySelectorAll(".slideshow img");
 
 function showSlides(){
-
 slides.forEach(img=>img.style.display="none");
-
 slideIndex++;
-
 if(slideIndex>slides.length){
 slideIndex=1;
 }
-
 slides[slideIndex-1].style.display="block";
-
 setTimeout(showSlides,3000);
-
 }
 
+// **Slideshow start immediately**  
+showSlides();
+
+// Hearts
 for(let i=0;i<30;i++){
 let heart=document.createElement("div");
 heart.innerHTML="❤";
@@ -205,6 +203,7 @@ heart.style.animationDuration=(4+Math.random()*5)+"s";
 document.body.appendChild(heart);
 }
 
+// Confetti
 for(let i=0;i<40;i++){
 let confetti=document.createElement("div");
 confetti.className="confetti";
